@@ -83,10 +83,12 @@ server.post('/api/db/signin', async(req, res) => {
 })
 
 server.post('/api/sb/signin', async (req, res) => {
-  const {data} = await auth.signIn(req.body)
-  if(data.session) { saveSession(req, res, data); return }
-  res.send(data)
+  const result = await auth.signIn(req.body)
+  console.log(result)
+  if(result.data.session) { saveSession(req, res, result.data); return }
+  res.send(result)
 })
+
 server.post('/api/sb/social', async (req, res) => {
   const result = await auth.signInSocial(req.body)
   res.send(result)
