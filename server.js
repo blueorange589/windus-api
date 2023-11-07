@@ -18,7 +18,7 @@ server.use(session({ secret: 'atu19.', resave: false, saveUninitialized: true })
 
 // middleware to test if authenticated
 function isAuthenticated (req, res, next) {
-  //console.log(req.session)
+  console.log(req.session)
   if (req.session.user) next()
   else res.send({data:{}, error: {msg: 'auth required'}})
 }
