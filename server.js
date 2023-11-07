@@ -30,7 +30,7 @@ server.post('/api/db/query', async(req, res) => {
   res.send(result)
 })
 
-server.post('/api/sb/query', isAuthenticated, async(req, res) => {
+server.post('/api/sb/query', async(req, res) => {
   const result = await query(req.body)
   res.send(result)
 })
@@ -84,7 +84,6 @@ server.post('/api/db/signin', async(req, res) => {
 
 server.post('/api/sb/signin', async (req, res) => {
   const result = await auth.signIn(req.body)
-  console.log(result)
   if(result.data.session) { saveSession(req, res, result.data); return }
   res.send(result)
 })
