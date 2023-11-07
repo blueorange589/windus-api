@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "@supabase/supabase-js": "^2.38.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mariadb": "^3.2.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "4ft-api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blueorange589/4ft.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blueorange589/4ft/issues"
+  },
+  "homepage": "https://github.com/blueorange589/4ft#readme",
+  "description": ""
+}
